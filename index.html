@@ -16,9 +16,9 @@
 
     /* ----- LOGO ----- */
     .logo img {
-        width: 260px;
-        max-width: 70%;
-        margin-top: 60px;
+        width: 270px;
+        max-width: 80%;
+        margin-top: 70px;
     }
 
     /* ----- KHỐI TÌM KIẾM ----- */
@@ -120,7 +120,7 @@
 function searchAction() {
     let query = document.getElementById("search").value;
     if (query.trim() !== "") {
-        window.location.href = "/search?q=" + encodeURIComponent(query);
+        window.location.href = "/search.html?q=" + encodeURIComponent(query);
     }
 }
 
@@ -149,8 +149,8 @@ function quickSearch(text) {
     <div class="suggestion-item" onclick="quickSearch('Pritery Techno')">Pritery Techno</div>
     <div class="suggestion-item" onclick="quickSearch('MeoNhii Emojicat')">MeoNhii Emojicat</div>
     <div class="suggestion-item" onclick="quickSearch('Lê thô sơ')">Lê thô sơ</div>
-    <div class="suggestion-item" onclick="quickSearch('YouTube')">YouTube</div>
-    <div class="suggestion-item" onclick="quickSearch('Facebook')">Facebook</div>
+    <div class="suggestion-item" onclick="quickSearch('Mon Fansub')">Mon Fansub</div>
+    <div class="suggestion-item" onclick="quickSearch('Tiệm Phở Anh Hai')">Tiệm Phở Anh Hai</div>
 </div>
 
 <footer>
