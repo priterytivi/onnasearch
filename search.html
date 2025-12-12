@@ -121,8 +121,11 @@
 
 <script>
 /* ---------- CONFIG (use your keys) ---------- */
+<script>
 const API_KEY = "AIzaSyAfT46n1xtT2FDlg5wfW5DEvh67WNnSHsc";
 const CX = "f7849da63441147a2";
+let currentTab = "web";
+let currentPage = 1;
 
 /* ---------- helpers ---------- */
 function qParam(){ return new URLSearchParams(location.search).get('q') || ''; }
