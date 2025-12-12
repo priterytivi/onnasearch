@@ -121,9 +121,8 @@
 
 <script>
 /* ---------- CONFIG (use your keys) ---------- */
-<script>
-const API_KEY = "AIzaSyAfT46n1xtT2FDlg5wfW5DEvh67WNnSHsc";
-const CX = "f7849da63441147a2";
+const API_KEY = "AIzaSyDiEFxHWUpus0hT_5ps_zgYVyoB9Lvhr8Q";
+const CX = "91d59bc6305324469";
 
 /* ---------- helpers ---------- */
 function qParam(){ return new URLSearchParams(location.search).get('q') || ''; }
@@ -179,7 +178,7 @@ async function loadAndRender(){
   paginationEl.innerHTML = '';
 
   if(!qv){
-    resultsEl.innerHTML = '<div class="hint">Enter your keywords and click search.</div>';
+    resultsEl.innerHTML = '<div class="hint">Nhập từ khóa và bấm Search.</div>';
     return;
   }
 
