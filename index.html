@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>ONNA Search</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f8f8f8;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* ----- LOGO ----- */
+    .logo img {
+        width: 260px;
+        max-width: 70%;
+        margin-top: 60px;
+    }
+
+    /* ----- KHỐI TÌM KIẾM ----- */
+    .search-box {
+        margin: 20px auto;
+        width: 600px;
+        max-width: 92%;
+        position: relative;
+    }
+
+    .search-input {
+        width: 100%;
+        padding: 14px 55px 14px 18px; /* chừa chỗ cho nút Search */
+        font-size: 18px;
+        border: 1px solid #ccc;
+        border-radius: 30px;
+        outline: none;
+        box-sizing: border-box;
+    }
+
+    /* ----- NÚT SEARCH BÊN TRONG ----- */
+    .search-btn {
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 10px 18px;
+        font-size: 15px;
+        background: #0078ff;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .search-btn:hover {
+        background: #0060d4;
+    }
+
+    /* ----- GỢI Ý ----- */
+    .suggestion-box {
+        width: 600px;
+        max-width: 92%;
+        margin: 10px auto;
+        background: white;
+        border-radius: 15px;
+        border: 1px solid #ddd;
+        overflow: hidden;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .suggestion-item {
+        padding: 12px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.2s;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+    }
+
+    .suggestion-item:last-child {
+        border-bottom: none;
+    }
+
+    .suggestion-item:hover {
+        background: #f0f0f0;
+    }
+
+    footer {
+        margin-top: 40px;
+        padding-bottom: 20px;
+        color: #555;
+        font-size: 14px;
+    }
+
+    /* ----- RESPONSIVE MOBILE ----- */
+    @media (max-width: 480px) {
+        .logo img {
+            width: 200px;
+            margin-top: 40px;
+        }
+        .search-input {
+            font-size: 16px;
+            padding: 12px 55px 12px 16px;
+        }
+        .search-btn {
+            font-size: 14px;
+            padding: 8px 14px;
+        }
+        .suggestion-item {
+            font-size: 15px;
+            padding: 10px;
+        }
+    }
+</style>
+
+<script>
+function searchAction() {
+    let query = document.getElementById("search").value;
+    if (query.trim() !== "") {
+        window.location.href = "/search?q=" + encodeURIComponent(query);
+    }
+}
+
+function quickSearch(text) {
+    window.location.href = "/search.html?q=" + encodeURIComponent(text);
+}
+</script>
+
+</head>
+<body>
+
+<div class="logo">
+    <a href="/"><img src="/logo.png"></a>
+</div>
+
+<!-- THANH TÌM KIẾM -->
+<div class="search-box">
+    <input id="search" class="search-input" type="text" placeholder="Search...">
+    <button class="search-btn" onclick="searchAction()">Search</button>
+</div>
+
+<!-- GỢI Ý -->
+<div class="suggestion-box">
+    <div class="suggestion-item" onclick="quickSearch('ONNA Online TV')">ONNA Online TV</div>
+    <div class="suggestion-item" onclick="quickSearch('Địt mẹ bọn spam comment sao đơn')">Địt mẹ bọn spam comment sao đơn</div>
+    <div class="suggestion-item" onclick="quickSearch('Pritery Techno')">Pritery Techno</div>
+    <div class="suggestion-item" onclick="quickSearch('MeoNhii Emojicat')">MeoNhii Emojicat</div>
+    <div class="suggestion-item" onclick="quickSearch('Lê thô sơ')">Lê thô sơ</div>
+    <div class="suggestion-item" onclick="quickSearch('YouTube')">YouTube</div>
+    <div class="suggestion-item" onclick="quickSearch('Facebook')">Facebook</div>
+</div>
+
+<footer>
+    © 2025 - ONNA Network
+</footer>
+
+</body>
+</html>
